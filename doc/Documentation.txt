@@ -13,3 +13,5 @@ FindX class is to find the 'x' variable in an equation where 'x' is the unknown.
 Differentiate takes the equation and creates the derivitive of it.
 
 Simplify takes an equation and then simplifies it for the user.
+
+The class "EquationContext" is used to create the context for the strategy pattern.

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include "toString.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ class EquationSolver
         string solvedEquation;
         string equation;
         vector<string> equationSteps;
+        ToString* outputString;
 
     public:
         EquationSolver();

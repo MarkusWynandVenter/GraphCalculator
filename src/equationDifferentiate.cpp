@@ -40,4 +40,6 @@ void EquationDifferentiate::solveEquation()
     this->equationSteps.push_back("Differentiating equation");
     this->equationSteps.push_back("x = " + this->equation);
     this->solvedEquation = this->equation;
+
+    outputString = new ToString("Differentiate equation solved");
 }

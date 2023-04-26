@@ -13,6 +13,7 @@ class EquationDifferentiate : public EquationSolver
         string solvedEquation;
         string equation;
         vector<string> equationSteps;
+        ToString* outputString;
 
     public:
         EquationDifferentiate();

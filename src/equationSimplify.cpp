@@ -40,4 +40,6 @@ void EquationSimplify::solveEquation()
     this->equationSteps.push_back("Simplifying equation");
     this->equationSteps.push_back("x = " + this->equation);
     this->solvedEquation = this->equation;
+
+    outputString = new ToString("Simplify equation solved");
 }

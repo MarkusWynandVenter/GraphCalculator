@@ -40,4 +40,6 @@ void EquationFindX::solveEquation()
     this->equationSteps.push_back("Solving for x");
     this->equationSteps.push_back("x = " + this->equation);
     this->solvedEquation = this->equation;
+
+    outputString = new ToString("Find X equation solved");
 }
