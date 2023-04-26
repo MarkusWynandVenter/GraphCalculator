@@ -1,0 +1,1 @@
+Files with the names of "simplifyEquation" used to simplyfy equations.

@@ -1,0 +1,1 @@
+The files named with "solveEquation" is to solve the equation of X.

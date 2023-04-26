@@ -1,0 +1,1 @@
+An extra equation function with the files named "differentiateEquation" to get the derivative.
