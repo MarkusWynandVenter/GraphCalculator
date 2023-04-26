@@ -1,0 +1,15 @@
+Using a strategy design Pattern to swap out each equation.
+
+Using "equationSolver" as the abstract Strategy Class
+The  Differentiate, FindX and Simplify is all concrete classes
+
+All the classes have 3 variables. 
+    1 is the equation from the user
+    2 is the solved equations or the answer rather
+    3 is the steps as they went on.
+
+FindX class is to find the 'x' variable in an equation where 'x' is the unknown.
+
+Differentiate takes the equation and creates the derivitive of it.
+
+Simplify takes an equation and then simplifies it for the user.
