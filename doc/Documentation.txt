@@ -15,3 +15,12 @@ Differentiate takes the equation and creates the derivitive of it.
 Simplify takes an equation and then simplifies it for the user.
 
 The class "EquationContext" is used to create the context for the strategy pattern.
+
+Added a output class called "toString", it handles to output to a console so far.
+
+Need to be done:
+    Set up Epsilon OS in VM
+    first compile and run of the code in VS code
+    Create a makefile for easier compile and run
+    Added the algoritms to the equations
+    See if step by step output is available
