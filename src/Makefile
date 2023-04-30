@@ -1,4 +1,4 @@
-CC = g++
+CC = gcc
 CFLAGS = -Wall -g
 
 main: main.o equationSolver.o equationContext.o toString.o equationDifferentiate.o equationSimplify.o equationFindX.o
