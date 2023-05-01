@@ -20,29 +20,42 @@ int main () {
     {
         input = new gatherInput();
 
-        if(input->getEquationType() == "Diff")
-        {
-            equationContext.setSolver(make_unique<EquationDifferentiate>());
-            equationContext.solveEquation();
-            delete input;
+        try {
+            if(input->getEquationType() == "Diff")
+            {
+                equationContext.setSolver(make_unique<EquationDifferentiate>());
+                equationContext.solveEquation();
+                delete input;
+            }
+            else if (input->getEquationType() == "Solve")
+            {
+                equationContext.setSolver(make_unique<EquationFindX>());
+                equationContext.solveEquation();
+                delete input;
+            }
+            else if (input->getEquationType() == "Simplify")
+            {
+                equationContext.setSolver(make_unique<EquationSimplify>());
+                equationContext.solveEquation();
+                delete input;
+            }
+            else if (input->getInput() == "Exit"){
+                programRunning = false;
+                cout << "Exiting Program" << endl;
+                delete input;
+                exit(0);
+            }      
+            else
+            {
+                throw "Invalid Input";
+            }
         }
-        else if (input->getEquationType() == "Solve")
+
+        catch(const char* msg)
         {
-            equationContext.setSolver(make_unique<EquationFindX>());
-            equationContext.solveEquation();
+            cout << "Error: ";
+            cout << msg << endl << endl;
             delete input;
-        }
-        else if (input->getEquationType() == "Simplify")
-        {
-            equationContext.setSolver(make_unique<EquationSimplify>());
-            equationContext.solveEquation();
-            delete input;
-        }
-        else
-        {
-            cout << "Invalid Input" << endl;
-            delete input;
-            exit(0);
         }
     }
 

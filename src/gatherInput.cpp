@@ -32,12 +32,6 @@ void gatherInput::setEquation()
             }
         }
     }
-
-    if(equation == "")
-    {
-        cout << "Invalid Input" << endl;
-        exit(0);
-    }
 }
 
 void gatherInput::setEquationType()
@@ -49,12 +43,6 @@ void gatherInput::setEquationType()
             equationType = input.substr(0, i);
             break;
         }
-    }
-
-    if(equationType == "")
-    {
-        cout << "Invalid Input" << endl;
-        exit(0);
     }
 }
 
