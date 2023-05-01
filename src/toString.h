@@ -1,6 +1,8 @@
 #ifndef TO_STRING_H
 #define TO_STRING_H
 
+//The class used for outputing the solved equations
+
 #include <string>
 #include <iostream>
 

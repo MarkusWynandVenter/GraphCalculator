@@ -1,6 +1,9 @@
 #ifndef EQUATION_CONTEXT_H
 #define EQUATION_CONTEXT_H
 
+//The context class for the equation solver strategy Pattern
+//This class is responsible for setting the equation solver and calling the solveEquation method
+
 #include <vector>
 #include <string>
 #include <memory>

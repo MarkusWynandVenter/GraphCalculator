@@ -1,6 +1,9 @@
 #ifndef GAHTERINPUT_H
 #define GAHTERINPUT_H
 
+//The class for gathering input from the user
+//This class also seperates the equation from the equation type from the input
+
 #include <iostream>
 #include <string>
 

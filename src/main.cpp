@@ -18,28 +18,38 @@ int main () {
 
     while(programRunning)
     {
+        //This loop will run until the user enters "Exit"
+
+        //First we gather the input from the user using the gatherInput class
         input = new gatherInput();
+
+        //Then we set the equation solver based on the equation type from the input
+        //Inside a try bracket to catch invalid input
 
         try {
             if(input->getEquationType() == "Diff")
             {
+                //Sees the input is for a differentiation equation
                 equationContext.setSolver(make_unique<EquationDifferentiate>());
                 equationContext.solveEquation();
                 delete input;
             }
             else if (input->getEquationType() == "Solve")
             {
+                //Sees the input is for a solve for x equation
                 equationContext.setSolver(make_unique<EquationFindX>());
                 equationContext.solveEquation();
                 delete input;
             }
             else if (input->getEquationType() == "Simplify")
             {
+                //Sees the input is for a simplify equation
                 equationContext.setSolver(make_unique<EquationSimplify>());
                 equationContext.solveEquation();
                 delete input;
             }
             else if (input->getInput() == "Exit"){
+                //Sees the users wants to exit the program
                 programRunning = false;
                 cout << "Exiting Program" << endl;
                 delete input;
@@ -47,12 +57,14 @@ int main () {
             }      
             else
             {
+                //Sees the input is invalid
                 throw "Invalid Input";
             }
         }
 
         catch(const char* msg)
         {
+            //Catches the error and prints it to the console
             cout << "Error: ";
             cout << msg << endl << endl;
             delete input;
