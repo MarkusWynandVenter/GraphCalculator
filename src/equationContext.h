@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <memory>
 #include "equationSolver.h"
 #include <iostream>
 

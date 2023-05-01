@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <memory>
 #include "equationContext.h"
 #include "equationSolver.h"
 #include "equationDifferentiate.h"
