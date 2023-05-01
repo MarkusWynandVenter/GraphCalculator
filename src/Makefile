@@ -1,23 +1,26 @@
-CC = gcc
+CXX = g++
 CFLAGS = -Wall -g
 
-main: main.o equationSolver.o equationContext.o toString.o equationDifferentiate.o equationSimplify.o equationFindX.o
-	$(CC) $(CFLAGS) -o main main.o equationSolver.o equationContext.o toString.o equationDifferentiate.o equationSimplify.o equationFindX.o
+objects = main.o equationSolver.o equationContext.o toString.o equationDifferentiate.o equationSimplify.o equationFindX.o
 
-main.o: main.cpp equationSolver.h equationContext.h toString.h equationDifferentiate.h equationSimplify.h equationFindX.h
-	$(CC) $(CFLAGS) -c main.cpp
+all: $(objects)
+	$(CXX) $(CFLAGS) -o main $(objects)
 
-equationSolver.o: equationSolver.h equationContext.h toString.h equationDifferentiate.h equationSimplify.h equationFindX.h
+main.o: main.cpp equationSolver.h
 
-equationContext.o: equationContext.cpp equationContext.h toString.h equationDifferentiate.h equationSimplify.h equationFindX.h
+equationSolver.o: equationSolver.h equationSolver.cpp
 
-toString.o: toString.cpp toString.h
+equationContext.o: equationContext.h equationContext.cpp
 
-equationDifferentiate.o: equationDifferentiate.cpp equationDifferentiate.h
-	
-equationSimplify.o: equationSimplify.cpp equationSimplify.h
+toString.o: toString.h toString.cpp
 
-equationFindX.o: equationFindX.cpp equationFindX.h
+equationDifferentiate.o: equationDifferentiate.h equationDifferentiate.cpp
+
+equationSimplify.o: equationSimplify.h equationSimplify.cpp
+
+equationFindX.o: equationFindX.h equationFindX.cpp
+
+.PHONY: all clean
 
 clean:
-	rm *.o
+	rm *.o main

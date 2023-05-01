@@ -5,7 +5,6 @@
 #include <string>
 #include <memory>
 #include "equationSolver.h"
-#include <iostream>
 
 using namespace std;
 

@@ -9,19 +9,9 @@ using namespace std;
 
 class EquationSimplify : public EquationSolver
 {
-    private:
-        string solvedEquation;
-        string equation;
-        vector<string> equationSteps;
-        ToString* outputString;
-
     public:
         EquationSimplify();
         ~EquationSimplify();
-        void setEquation(string equation);
-        string getEquation();
-        string getSolvedEquation();
-        string getEquationSteps();
         void solveEquation();
         
 };

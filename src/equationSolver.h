@@ -19,10 +19,15 @@ class EquationSolver
         EquationSolver();
         ~EquationSolver();
         void setEquation(string equation);
+        void setSolvedEquation(string solvedEquation);
+        void setEquationSteps(vector<string> equationSteps);
         string getEquation();
         string getSolvedEquation();
         string getEquationSteps();
         virtual void solveEquation() = 0;
+        void addStep(string step);
+        void printSolved();
+        void printSteps();
         
 };
 
