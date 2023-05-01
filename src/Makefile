@@ -1,7 +1,7 @@
 CXX = g++
 CFLAGS = -Wall -g
 
-objects = main.o equationSolver.o equationContext.o toString.o equationDifferentiate.o equationSimplify.o equationFindX.o
+objects = main.o equationSolver.o equationContext.o toString.o equationDifferentiate.o equationSimplify.o equationFindX.o gatherInput.o
 
 all: $(objects)
 	$(CXX) $(CFLAGS) -o main $(objects)
@@ -13,6 +13,8 @@ equationSolver.o: equationSolver.h equationSolver.cpp
 equationContext.o: equationContext.h equationContext.cpp
 
 toString.o: toString.h toString.cpp
+
+gatherInput.o: gatherInput.h gatherInput.cpp
 
 equationDifferentiate.o: equationDifferentiate.h equationDifferentiate.cpp
 

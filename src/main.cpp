@@ -6,22 +6,45 @@
 #include "equationDifferentiate.h"
 #include "equationFindX.h"
 #include "equationSimplify.h"
+#include "gatherInput.h"
 
 
 using namespace std;
 
 int main () {
-
+    bool programRunning = true;
     EquationContext equationContext;
+    gatherInput* input;
 
-    equationContext.setSolver(make_unique<EquationDifferentiate>());
-    equationContext.solveEquation();
+    while(programRunning)
+    {
+        input = new gatherInput();
 
-    equationContext.setSolver(make_unique<EquationFindX>());
-    equationContext.solveEquation();
-
-    equationContext.setSolver(make_unique<EquationSimplify>());
-    equationContext.solveEquation();
+        if(input->getEquationType() == "Diff")
+        {
+            equationContext.setSolver(make_unique<EquationDifferentiate>());
+            equationContext.solveEquation();
+            delete input;
+        }
+        else if (input->getEquationType() == "Solve")
+        {
+            equationContext.setSolver(make_unique<EquationFindX>());
+            equationContext.solveEquation();
+            delete input;
+        }
+        else if (input->getEquationType() == "Simplify")
+        {
+            equationContext.setSolver(make_unique<EquationSimplify>());
+            equationContext.solveEquation();
+            delete input;
+        }
+        else
+        {
+            cout << "Invalid Input" << endl;
+            delete input;
+            exit(0);
+        }
+    }
 
     return 0;
 }
