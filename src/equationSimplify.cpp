@@ -1,8 +1,8 @@
 #include "equationSimplify.h"
 
-EquationSimplify::EquationSimplify()
+EquationSimplify::EquationSimplify(string parEquation)
 {
-    setEquation("Simplify");
+    setEquation(parEquation);
 }
 
 EquationSimplify::~EquationSimplify()

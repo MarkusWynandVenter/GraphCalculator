@@ -1,8 +1,8 @@
 #include "equationDifferentiate.h"
 
-EquationDifferentiate::EquationDifferentiate()
+EquationDifferentiate::EquationDifferentiate(string parEquation)
 {
-    setEquation("Differentiate");
+    setEquation(parEquation);
 }
 
 EquationDifferentiate::~EquationDifferentiate()

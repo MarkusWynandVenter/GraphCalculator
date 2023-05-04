@@ -9,7 +9,8 @@ gatherInput::gatherInput()
     equationType = "";
     input = "";
 
-    cout << "Please enter the type of equation (Example Diff(), Solve(), Simplify()) " << endl;
+    cout << "To quit the program enter \"Exit\"" << endl;
+    cout << "Please enter the equation int eh format of EquationType(equation) (Example Diff(), Solve(), Simplify()) " << endl;
     cout << "Enter the Equation: ";
 
     getline(cin, input);
@@ -27,14 +28,8 @@ void gatherInput::setEquation()
     {
         if(input[i] == '(')
         {
-            for(int j = i; j < input.length(); j++)
-            {
-                if(input[j] == ')')
-                {
-                    equation = input.substr(i, j - i + 1);
-                    break;
-                }
-            }
+            equation = input.substr(i + 1, input.length() - i - 2);
+            break;
         }
     }
 }
@@ -56,14 +51,18 @@ void gatherInput::setEquationType()
 string gatherInput::getEquation()
 {
     //calls the setEquation method and returns the equation variable
-    setEquation();
+    if(equation == ""){
+        setEquation();
+    }
     return equation;
 }
 
 string gatherInput::getEquationType()
 {
     //calls the setEquationType method and returns the equationType variable
-    setEquationType();
+    if(equationType == ""){
+        setEquationType();
+    }
     return equationType;
 }
 

@@ -7,13 +7,15 @@
 #include <vector>
 #include <string>
 #include "equationSolver.h"
+#include "commonMathFunc.h"
+#include <iostream>
 
 using namespace std;
 
 class EquationFindX : public EquationSolver
 {
     public:
-        EquationFindX();
+        EquationFindX(string parEquation);
         ~EquationFindX();
         void solveEquation();
         

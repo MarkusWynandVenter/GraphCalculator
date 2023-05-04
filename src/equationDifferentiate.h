@@ -16,7 +16,7 @@ class EquationDifferentiate : public EquationSolver
 
 
     public:
-        EquationDifferentiate();
+        EquationDifferentiate(string parEquation);
         ~EquationDifferentiate();
         void solveEquation();
         

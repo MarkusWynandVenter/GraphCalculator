@@ -30,21 +30,21 @@ int main () {
             if(input->getEquationType() == "Diff")
             {
                 //Sees the input is for a differentiation equation
-                equationContext.setSolver(make_unique<EquationDifferentiate>());
+                equationContext.setSolver(make_unique<EquationDifferentiate>(input->getEquation()));
                 equationContext.solveEquation();
                 delete input;
             }
             else if (input->getEquationType() == "Solve")
             {
                 //Sees the input is for a solve for x equation
-                equationContext.setSolver(make_unique<EquationFindX>());
+                equationContext.setSolver(make_unique<EquationFindX>(input->getEquation()));
                 equationContext.solveEquation();
                 delete input;
             }
             else if (input->getEquationType() == "Simplify")
             {
                 //Sees the input is for a simplify equation
-                equationContext.setSolver(make_unique<EquationSimplify>());
+                equationContext.setSolver(make_unique<EquationSimplify>(input->getEquation()));
                 equationContext.solveEquation();
                 delete input;
             }

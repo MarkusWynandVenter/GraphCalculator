@@ -13,7 +13,7 @@ using namespace std;
 class EquationSimplify : public EquationSolver
 {
     public:
-        EquationSimplify();
+        EquationSimplify(string parEquation);
         ~EquationSimplify();
         void solveEquation();
         
