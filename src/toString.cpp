@@ -1,16 +1,16 @@
 #include "toString.h"
 
-ToString::ToString(string toString)
+ToString::ToString(string parString)
 {
-    if(toString == "")
+    //Sets the string to be outputed
+    if(parString == "")
     {
-        this->toString = "No string set";
+        theString = "No string set";
     }
     else
     {
-        this->toString = toString;
+        theString = parString;
     }
-    this->toString = toString;
 }
 
 ToString::~ToString()
@@ -19,15 +19,18 @@ ToString::~ToString()
 
 string ToString::getToString()
 {
-    return this->toString;
+    //Retuens the current output string
+    return theString;
 }
 
-void ToString::setToString(string toString)
+void ToString::setToString(string parString)
 {
-    this->toString = toString;
+    //Sets the output string to the string passed in as a parameter
+    theString = parString;
 }
 
 void ToString::output()
 {
-    cout << this->toString << endl;
+    //Outputs the string
+    cout << theString << endl;
 }

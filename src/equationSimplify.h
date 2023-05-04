@@ -1,6 +1,9 @@
 #ifndef EQUALTION_SIMPLIFY_H
 #define EQUALTION_SIMPLIFY_H
 
+//The class for simplifying equations using the equation solver strategy Pattern
+//This class inherits from the EquationSolver class
+
 #include <vector>
 #include <string>
 #include "equationSolver.h"
@@ -9,19 +12,9 @@ using namespace std;
 
 class EquationSimplify : public EquationSolver
 {
-    private:
-        string solvedEquation;
-        string equation;
-        vector<string> equationSteps;
-        ToString* outputString;
-
     public:
-        EquationSimplify();
+        EquationSimplify(string parEquation);
         ~EquationSimplify();
-        void setEquation(string equation);
-        string getEquation();
-        string getSolvedEquation();
-        string getEquationSteps();
         void solveEquation();
         
 };

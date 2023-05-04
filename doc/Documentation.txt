@@ -18,9 +18,14 @@ The class "EquationContext" is used to create the context for the strategy patte
 
 Added a output class called "toString", it handles to output to a console so far.
 
+Created a class called "gatherInput" to handle the input and seperate the type of eqution and the equation itself.
+Created it to be in a format of "Diff(equation), Solve(equation), Simplify(equation)" type of input. 
+
+Added error handling in the "main.cpp" file with a catch and throw.
+
+
 Need to be done:
-    Set up Epsilon OS in VM
-    first compile and run of the code in VS code
-    Create a makefile for easier compile and run
     Added the algoritms to the equations
     See if step by step output is available
+
+    Set up a common math class to multiply a number into a perentihis and other common math things to clean up a class.
